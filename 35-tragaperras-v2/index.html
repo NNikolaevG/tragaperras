@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>35 - Tragaperras V2</title>
+    <meta name="description" content="Ejercicios que haremos en clase del curso de confección de páginas web" />
+    <meta name="keywords" content="html,css,javascript,web,curso,ejercicio" />
+    <meta name="author" content="Óscar Rey" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/fav-icon.png" />
+
+    <!-- Cargo iconos básicos de bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+
+    <!-- Cargo la hoja de estilos de BootStrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Cargo mi hoja de estilos (cargar siempre al final) -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+
+     <!-- Cargo mi fichero .js -->
+     <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <h1 class="my-4 text-center">Tragaperras V1</h1>
+
+        <div class="row">
+            <div class="col-6 text-center">
+                <button type="button" class="btn btn-danger my-3"
+                onclick="aumentarJugadas()">
+                    Moneda
+                </button>
+                <h3 class="text-danger text-center">
+                    Nº de jugadas
+                </h3>
+                <h2 id="contador-jugadas"
+                 class="text-danger text-center">
+                    0
+                </h2>
+            </div>
+            
+            <div class="col-6 text-center">
+                <button id="boton-cobrar"
+                type="button" class="btn btn-primary my-3"
+                onclick="cobrarPremios()" disabled>
+                    Cobrar premios
+                </button>
+                <h3 class="text-primary text-center">
+                    Premios acumulados
+                </h3>
+                <h2 id="premios-acumulados"
+                 class="text-primary text-center">
+                    0 €
+                </h2>
+            </div>
+
+            <!-- Casillas -->
+            <div id="casilla-1" class="col-4 text-center">
+                <img src="img/0.png" />
+            </div>
+            
+            <div id="casilla-2" class="col-4 text-center">
+                <img src="img/0.png" />
+            </div>
+            
+            <div id="casilla-3" class="col-4 text-center">
+                <img src="img/0.png" />
+            </div>
+
+            <!-- Botones Mantener -->
+            <div class="col-4 text-center my-4">
+                <input type="checkbox" id ="mantener-1" onchange="mantener(1)" class="d-none " />
+                <label for="mantener-1" class="btn btn-secondary" id="l-mantener-1">Mantener</label>
+            </div>
+            
+            <div class="col-4 text-center my-4">
+                <input type="checkbox" id ="mantener-2" onchange="mantener(2)" class="d-none " />
+                <label  for="mantener-2" class="btn btn-secondary" id="l-mantener-2">Mantener</label>
+            </div>
+            
+            <div class="col-4 text-center my-4">
+                <input type="checkbox" id ="mantener-3" onchange="mantener(3)" class="d-none " />
+                <label  for="mantener-3" class="btn btn-secondary" id="l-mantener-3">Mantener</label>
+            </div>
+
+            <div class="col-12 text-center my-4">
+                <button type="button" id="boton-jugar"
+                 class="btn btn-success"
+                onclick="jugar()" disabled>
+                    Jugar
+                </button>
+            </div>
+
+        </div>
+        
+
+
+
+    </main>
+
+    <footer>
+    </footer>
+
+    <!-- Cargo el fichero JS de BootStrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+ 
+
+</body>
+
+</html>
